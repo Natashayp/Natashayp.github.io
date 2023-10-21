@@ -1,244 +1,403 @@
-/* General */
-body{
-    font-family: 'DM Sans', sans-serif;
-    background:#0c0b09;;
-    color: #fff;
-    margin-top: -16px;
-    overflow-x:hidden;
-
-}
-
-a {
-    color: #cda45e;
-    text-decoration: none;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  a:hover {
-    color: white;
-    text-decoration: none;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'DM Sans', sans-serif;
-  }
+    <title>Blanche Bistro Website</title>
 
-/* navbar */
-.logo{
-    width: 50px;
-    border-radius: 50%;
-}
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,800;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,800;1,9..40,1000&display=swap" rel="stylesheet">
 
-.nav-item{
-    margin-left: auto;
-    margin-right: 20px;
-}
+    <!-- font awsome -->
+    <script src="https://kit.fontawesome.com/0cd2e44115.js" crossorigin="anonymous"></script>
 
-.navbar{
-  background: rgba(12, 11, 9, 0.6);
-}
+    <!-- CSS File -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 
-.navbar a:current{
-  color: #cda45e;
-}
+    <!-- Javavscript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
+</head>
+<body >
+    <!-- NAVBAR -->
+    <div id="navbar" class="navbar">
+        <nav class="navbar navbar-toogleable-md navbar-expand-sm fixed-top">
+            
+            <ul class="navbar-nav">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="Assets/Image/blanche logo white.jpg" alt="blanche logo">
+                </a>
+            </ul>
 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-/* Home */
-#home {
-  width: 100%;
-  height: 100vh;
-  background-image: url(bg2.jpg);
-  background-size: cover;
-  position: relative;
-  padding: 0;
-  background-blend-mode: multiply;
-  background-color: grey;
-  padding:0;
-}
-
-#home h1{
-  font-weight: bolder;
-  margin-left:0;
-  padding-left:0;
-  font-size: 60px;
-  text-shadow: 2px 2px 4px #000000;
-}
-
-#home h2{
-  font-style: italic;
-  font-weight: 300;
-  font-size: 30px;
-  color: #cda45e;
-  margin-left: 0;
-  padding-left: 0;
-  text-shadow: 2px 2px 4px #000000;
- 
-}
-
-.order-btn{
-  color: white;
-  width: 100px;
-  background-color: #cda45e;
-  border-radius: 12px;
-  padding: 8px 14px;
-  text-align: center;
-  border:none;
-  margin-top: 10px;
-  box-shadow: 1px 2px 5px #000000;   
-}
-
-.order-btn:hover{
-  background-color:#a16e15;
-  transform: scale(1.1);
-}
-
-
-/* ABOUT */
-#about{
-  width: 100%;
-  height: 100vh;
-  background: url("Assets/Image/bg-about.jpg") top center ;
-  background-size: cover;
-  position: relative;
-  padding: 0;
-  background-blend-mode: multiply;
-  background-color:rgba(0, 0, 0, 0.819);
-  padding:0;
-
-}
-
-#about .row{
- margin-top: 50px;
-  
-}
-
-#about .about-text{
-  text-align: justify;
-  
-}
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#menu" class="nav-link">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#event" class="nav-link">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">Gallery</a>
+                    </li> 
+            </ul>
+        </div>
+        
+        </nav>
+    </div>
 
 
 
-
-/* MENU */
-#menu{
-  width: 100%;
-  background-color: rgb(40, 37, 30);
-  background-size: cover;
-  position: relative;
-  padding-bottom: 20px;
-  align-items: center;
-  text-align: center;
-}
-
-.menu-title{
-  margin-top: 100px;
-  margin-bottom: 30px;
-}
-
-/* flipcard */
-.flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    display: block;
-    margin: auto;
-    margin-top: 40px;
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-    background-color:#cda45e;
-    color: white;
-    transform: rotateY(180deg);
-    padding: 5px;
-    padding-top: 20px;
-  }
+    <!-- HOME -->
+    <section id="home" class="d-flex align-items-center">
+    <div class="container position-relative text-center ">
+        <h1>Welcome to Blanche Bistro!</h1>
+        <h2>Cozy place in your neighbourhood</h2>
+       <a href="https://linktr.ee/BlancheBistro"><button type="button" class="order-btn"  >Order</button></a> 
+    </div>
+    </section>
 
 
-  /* EVENT */
-  #event{
-    background: url(Assets/Image/bg-event.jpg);
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    position: relative;
-    padding: 0;
-    background-blend-mode: multiply;
-    background-color: rgb(42, 41, 41);
-    padding:0;
-  }
+    <!-- About -->
+    <section id="about" class="d-flex align-items-center">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-text">
+                <h1>About Our Bistro</h1>
+                <p>Welcome to Blanche Bistro, when culinary excellence meets warm ambience. Our bistro caters to diverse tastes with a menu that fuses Western and Asian culinary delights. Not only that, our warm and welcoming ambiance, makes us the ideal spot to get productive and a cozy haven for work or study sessions. Lastly, no visit is complete without savoring a cup of our exceptional coffee. Visit us for a culinary adventure, a productive escape, and the best brew in town. </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="embed-responsive embed-responsive-4by3" >
+                    <iframe class="embed-responsive-item" src="Assets/Video/blanche video.mp4"></iframe>
+                </div>
+            </div>
+        </div>
 
 
-  .event-title{
-    text-align: center;
-    padding-top: 100px;
-    margin-bottom: 80px;
+        </div>
+    </section>
+
+
+    <!-- Menu -->
+    <section id="menu" class=" menu d-flex">
+        <div class="container">
+
+            <div class="menu-title">
+                <h1>Our Menu Specialties</h1>
+                <h5>Indulge in culinary delights</h5>
+
+            </div>
+
+        <div class="row menu-list">
+
+            <div class="col-lg-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="Assets/Image/Menu/waffle.jpg" alt="Waffle" style="object-fit: cover; width: 300px; height: 200px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h3>Waffle</h3>
+                        <p>Classic Waffle: A perfect blend of crispy and fluffy, served with your favorite toppings.</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="Assets/Image/Menu/carbonara.jpg" alt="Carbonara" style="object-fit: cover; width: 300px; height: 200px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h3>Carbonara</h3>
+                        <p>Al dente spaghetti delicately tossed in a rich, velvety sauce with crispy bacon, Parmesan, and a hint of black pepper</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="Assets/Image/Menu/capuccino.jpg" alt="Capuccino" style="object-fit: cover; width: 300px; height: 200px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h3>Capuccino</h3>
+                        <p>A harmonious blend of bold espresso, steamed milk, and a velvety foam, crowned with a sprinkle of cocoa or cinnamon.</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+
+        <div class="row menu-list pb-lg-5">
+
+            <div class="col-lg-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="Assets/Image/Menu/croffle.jpg" alt="Croffle" style="object-fit: cover; width: 300px; height: 200px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h3>Croffle</h3>
+                        <p> a crispy, buttery croissant-waffle fusion, served warm and perfect for both sweet and savory cravings</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="Assets/Image/Menu/nasi-bebek.jpg" alt="bebek" style="object-fit: cover; width: 300px; height: 200px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h3>Fried Duck</h3>
+                        <p>Crispy and succulent duck paired with rice, a delightful combination of textures and flavors</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="Assets/Image/Menu/mojito.jpg" alt="mojito" style="object-fit: cover; width: 300px; height: 200px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h3>Virgin Mojito</h3>
+                        <p>A refreshing and zesty non-alcoholic blend of lime, mint, and a hint of sweetness. Perfect for a revitalizing sip.</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Event -->
+    <section id="event">
+        <div class="event-title">
+            <h1>Event</h1>
+            <h5>Book ours or organize your own event at Blanche Bistro</h5>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-5">  
+              <div class="cooking-carousel">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo" data-slide-to="1"></li>
+                      <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                  
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <video autoplay loop muted src="Assets/Video/vid-cupcake1.mp4" alt="Los Angeles">
+                      </div>
+                      <div class="carousel-item">
+                        <video autoplay loop muted src="Assets/Video/vid-cupcake2.mp4" alt="Chicago">
+                      </div>
+                      <div class="carousel-item">
+                        <video autoplay loop muted src="Assets/Video/vid-cupcake3.mp4" alt="New York">
+                      </div>
+                    </div>
+                  
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </a>
+                  
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="cooking-text">
+                <h2>Kids Cooking Class</h2>
+                <h5>85k/pax</h5>
+                <p>Calling all young bakers and budding artists! Our kids' cupcakes decorating class is a sweet adventure in creativity. Kids will have a blast learning to decorate cupcakes with vibrant colors, edible glitter, and fun toppings. It's a hands-on, fun-filled experience that will leave them with both a happy heart and a delicious treat to take home. Let your child's imagination run wild at our cupcakes decorating class designed just for them!</p>
+                <a href="https://wa.me/6287774591739"><button>Book</button></a>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-7 align-items-sm-start">
+            <div class="meeting-text">
+              <h2>Private Gathering</h2>
+              <h5>750k/10 pax</h5>
+              <p>Indulge in a memorable and exclusive private gathering with our tailored package. Whether it's a family reunion, intimate celebration, or corporate event, our package offers a perfect blend of convenience and luxury. Enjoy a carefully curated menu, impeccable service, and a stylish venue to host your event. With personalized touches and attention to detail, we ensure your gathering is a resounding success. From decor to dining, we take care of it all, allowing you to focus on making unforgettable memories with your loved ones or colleagues. Book now to create cherished moments in a private setting that's all your own.</p>
+              <a href="https://wa.me/6287774591739"><button>Book</button></a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            
+            <div id="demo2" class="carousel slide" data-ride="carousel">
+              <div class="meeting-carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li data-target="#demo2" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo2" data-slide-to="1"></li>
+                  <li data-target="#demo2" data-slide-to="2"></li>
+                </ul>
+              
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <video autoplay loop muted src="Assets/Video/vid-gathering1.mp4" alt="Los Angeles">
+                  </div>
+                  <div class="carousel-item">
+                    <video autoplay loop muted src="Assets/Video/vid-gathering2.mp4" alt="Chicago">
+                  </div>
+                  <div class="carousel-item">
+                    <video autoplay loop muted src="Assets/Video/vid-gathering3.mp4" alt="New York">
+                  </div>
+                </div>
+              
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo2" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo2" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+
+              </div>
+            
+            </div>
+
+
+          </div>
+
+         
+
+        </div>
+
+
+
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="booking">
+      <div class="container">
+
+        <div class="booking-text">
+          <h2>Reservation</h2>
+          <p>Book a Table</p>
+        </div>
+
+      <div class="booking-form">
+            <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6 form-group mt-3">
+                  <input type="text" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6 form-group mt-3">
+                  <input type="text" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6 form-group mt-3">
+                  <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Book a Table</button></div>
+            </form>
+        </div>
+    </div>
+    </section>
+
+
+    <section id="footer" class="footer d-flex">
+      <div class="container">
+        <h1>Blanche Bistro</h1>
+
+
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="row">
+
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="row">
+
+            </div>
+          </div>
+
+          <div class="col--lg-7">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
     
-  }
 
-  .carousel{
-    width: 400px;
-    display: block;
-    margin: auto;
-    margin-bottom: 50px;
-   
+
+
     
-   
-  }
-
-  .carousel .carousel-item {
-    width: 400px;
-    height: 300px;
-  }
-  
-  .carousel-item img {
-      width: 400px;
-      height: 300px;
-     
-  }
-
-  .cupcake-text{
-    padding-left: 50px;
-    padding-right:50px;
-    text-align:  justify;
-    
-  }
-
-
+</body>
+</html>
