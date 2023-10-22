@@ -1,7 +1,6 @@
 function validateForm() {
   
   var phone = document.getElementById("phone");
-  var date = document.getElementById("date");
 
   if (isNaN(phone.value) == true)
   {
@@ -21,4 +20,3 @@ function validateForm() {
   }
   
 }
-
