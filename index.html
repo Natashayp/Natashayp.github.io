@@ -9,7 +9,7 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,800;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,800;1,9..40,1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,800;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,800;1,9..40,1000&family=Playfair+Display&family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
 
     <!-- font awsome -->
     <script src="https://kit.fontawesome.com/0cd2e44115.js" crossorigin="anonymous"></script>
@@ -23,6 +23,9 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    
+    <script src="main.js"></script>
+
 </head>
 <body >
     <!-- NAVBAR -->
@@ -31,7 +34,7 @@
             
             <ul class="navbar-nav">
                 <a class="navbar-brand" href="#">
-                    <img class="logo" src="Assets/Image/blanche logo white.jpg" alt="blanche logo">
+                    <img class="logo" src="Assets/Image/logo.jpg" alt="blanche logo">
                 </a>
             </ul>
 
@@ -54,7 +57,7 @@
                         <a href="#event" class="nav-link">Event</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#gallery" class="nav-link">Gallery</a>
+                        <a href="#booking" class="nav-link">Reservation</a>
                     </li> 
             </ul>
         </div>
@@ -85,9 +88,11 @@
                 </div>
             </div>
             <div class="col-lg-6">
+              <div class="about-vid">
                 <div class="embed-responsive embed-responsive-4by3" >
                     <iframe class="embed-responsive-item" src="Assets/Video/blanche video.mp4"></iframe>
                 </div>
+              </div>
             </div>
         </div>
 
@@ -248,10 +253,10 @@
 
             <div class="col-lg-7">
               <div class="cooking-text">
-                <h2>Kids Cooking Class</h2>
+                <h4>Kids Cooking Class</h4>
                 <h5>85k/pax</h5>
                 <p>Calling all young bakers and budding artists! Our kids' cupcakes decorating class is a sweet adventure in creativity. Kids will have a blast learning to decorate cupcakes with vibrant colors, edible glitter, and fun toppings. It's a hands-on, fun-filled experience that will leave them with both a happy heart and a delicious treat to take home. Let your child's imagination run wild at our cupcakes decorating class designed just for them!</p>
-                <a href="https://wa.me/6287774591739"><button>Book</button></a>
+                <a href="https://wa.me/6287774591739"><button class="event-btn">Book</button></a>
               </div>
             </div>
 
@@ -261,10 +266,10 @@
 
           <div class="col-lg-7 align-items-sm-start">
             <div class="meeting-text">
-              <h2>Private Gathering</h2>
+              <h4>Private Gathering</h4>
               <h5>750k/10 pax</h5>
               <p>Indulge in a memorable and exclusive private gathering with our tailored package. Whether it's a family reunion, intimate celebration, or corporate event, our package offers a perfect blend of convenience and luxury. Enjoy a carefully curated menu, impeccable service, and a stylish venue to host your event. With personalized touches and attention to detail, we ensure your gathering is a resounding success. From decor to dining, we take care of it all, allowing you to focus on making unforgettable memories with your loved ones or colleagues. Book now to create cherished moments in a private setting that's all your own.</p>
-              <a href="https://wa.me/6287774591739"><button>Book</button></a>
+              <a href="https://wa.me/6287774591739"><button class="event-btn">Book</button></a>
             </div>
           </div>
 
@@ -300,7 +305,6 @@
                 <a class="carousel-control-next" href="#demo2" data-slide="next">
                   <span class="carousel-control-next-icon"></span>
                 </a>
-
               </div>
             
             </div>
@@ -316,21 +320,103 @@
 
     </section>
 
-    <!-- BOOKING -->
+    <!-- RESERVATION -->
     <section id="booking" class="booking ">
-      <h2>Pendaftaran Asisten Lab Sistem Informasi</h2>
-      <div class="row-">
-
+      <h1>Reservation</h1>
+      <div class="row">
+      
         <form name="myForm" action="https://google.com" onsubmit="return validateForm()" method="post">
-          <label for="fname">Name:</label>
-          <input type="text" id="fname" name="fname" class="form-control">
-          <label for="nrp">NRP:</label>
-          <input type="text" id="nrp" name="nrp" class="form-control">
-
-          <input type="submit" value="Submit" class="btn btn-primary">
-          <input type="reset" value="kosongi" class="btn btn-warning">
+          <div class="form-input">
+            <input type="text" id="fname" name="fname" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="form-input">
+            <input type="text" id="email" name="email" class="form-control" placeholder="Your E-Mail" required>
+          </div>
+          <div class="form-input">
+            <input type="text" id="phone" name="phone" class="form-control" placeholder="Your Phone" required>
+          </div>
+          <div class="form-input">
+            <input type="text" id="date" name="date" class="form-control" placeholder="Date (dd-mm-yyyy)" required>
+          </div>
+          <div class="form-input">
+            <input type="text" id="time" name="time" class="form-control" placeholder="Time" required>
+          </div>
+          <div class="form-input">
+          <input type="number" id="numOfPeep" name="numOfPeep" class="form-control" placeholder="Number of People" required>
+          </div>
+          <div class="form-input">
+          <input type="text" id="msg" name="msg" class="form-control" placeholder="Message" required>
+          </div>
+          <div class="form-input">
+          <input type="submit" value="Book a Table" class="btn">
+          </div>
+         
         </form>
+
       </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer">
+
+        <!-- <h1>Contact & Visit Us</h1> -->
+        <div clas="row">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15862.616686334093!2d106.6975744!3d-6.3090832!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e527b3be32f9%3A0x5c84da93eaa1b521!2sBlanche%20Bistro!5e0!3m2!1sen!2sid!4v1697925157259!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="footer-logo" src="Assets/Image/logo.jpg" alt="logo">
+                <div class="logo-text">
+                    <h4>Cozy place in your neighbourhood</h4>
+                    <p>Ruko Savia blok C1 no 1 BSD, Ciater, Kec. Serpong, Kota Tangerang Selatan, Banten 15310</p>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="contact-us">
+                    <div>
+                        <h4>Contact Us</h4>
+                    </div>
+                    <div style="margin-top: 10px;">
+                            <p>Phone: +6287774591739</p>
+                    </div>
+                    <div style="margin-top: -15px;">
+                            <p>E-mail: blanchebistro@gmail.com</p>
+                    </div>
+                    <div class="socmed">
+                      <a href="https://www.facebook.com/p/Blanche-Bistro-100088481582569/" class="facebook" styl><i class="fa-brands fa-facebook"></i></a>
+                      <a href="https://www.instagram.com/blanchebistro.id/?hl=en" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                      <a href="https://www.tiktok.com/@blanchebistro.id" class="Tiktok "><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                    <div class="hours">
+                      <h4>Open Hours</h4>
+                      <div>
+                        <p>Tuesday-Sunday:</p>
+                        <p style="margin-top: -15px;">07:00AM-21:00AM</p>
+                      </div>
+                    </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="message">
+              <div>
+                <h4>Leave us a message</h4>
+              </div>
+              <form action="/action_page.php">
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Enter email" id="email" required>
+                </div>
+                <div>
+                  <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+                </div>
+                <button type="submit" class="btn-message btn-primary">Send</button>
+              </form>
+              </div>
+            </div>
+        </div>
+
     </section>
     
 </body>
