@@ -27,6 +27,8 @@ html{
     color: white;
   }
  
+
+ 
   
   /* navbar */
   .logo{
@@ -235,8 +237,6 @@ html{
       margin-bottom: 80px;
       
     }
-
-   
   
     .carousel{
       width: 400px;
@@ -258,15 +258,16 @@ html{
     }
   
     .cooking-text{
-      padding-left: 20px;
-      padding-right: 20px;
-      text-align:  justify;
+      margin-left: 100px;
       margin-right: 100px;
+      margin-bottom: 50px;
+      text-align:  justify;
       background-color: #7c633a;
       border-radius: 20px;
       padding-top: 10px;
       padding-bottom: 10px;
-      width: 700px;
+      padding: 20px;
+      
       
       
     }
@@ -287,15 +288,16 @@ html{
     }
   
     .meeting-text{
-      padding-left: 20px;
-      padding-right: 20px;
-      text-align:  justify;
       margin-left: 100px;
+      margin-right: 100px;
+      margin-bottom: 50px;
+      text-align:  justify;
       background-color: #7c633a;
       border-radius: 20px;
       padding-top: 10px;
       padding-bottom: 10px;
-      width: 700px;
+      padding:20px;
+      
       
     }
   
@@ -304,7 +306,7 @@ html{
      
     }
   
-    /* RESERVATION */
+/* RESERVATION */
     #booking{
       text-align: center;
       align-items: center;
@@ -353,7 +355,12 @@ html{
       display: block;
       margin: auto;
     }
-  /* FOOTER */
+
+    .form-input btn:hover{
+      background-color:#a16e15;
+      transform: scale(1.1);
+    }
+/* FOOTER */
 
 #footer{
     background-image: url(Assets/Image/bg-footer.jpg) ;
