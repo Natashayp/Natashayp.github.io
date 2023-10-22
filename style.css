@@ -1,6 +1,7 @@
 /* General */
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden !important;
   }
   
   body{
@@ -9,27 +10,23 @@ html{
       color: #fff;
       margin-top: -16px;
       overflow-x:hidden;
-  
+      
+  }
+
+  h1{
+    font-family: "Playfair Display", serif;
+    text-shadow: 2px 2px 4px #000000;
   }
   
   a {
       color: #cda45e;
       text-decoration: none;
     }
-    
-    a:hover {
-      color: white;
-      text-decoration: none;
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: 'DM Sans', sans-serif;
-    }
+  
+  a:hover{
+    color: white;
+  }
+ 
   
   /* navbar */
   .logo{
@@ -81,7 +78,7 @@ html{
     margin-left: 0;
     padding-left: 0;
     text-shadow: 2px 2px 4px #000000;
-   
+    
   }
   
   .order-btn{
@@ -111,10 +108,21 @@ html{
     position: relative;
     padding: 0;
     background-blend-mode: multiply;
-    background-color:rgba(0, 0, 0, 0.819);
+    background-color:rgba(0, 0, 0, 0.867);
     padding:0;
+    
   
   }
+
+  #about h1{
+    font-family: "Playfair Display", serif;
+    text-shadow: 2px 2px 4px #000000;
+  }
+
+  #about p{
+    text-shadow: #000000;
+  }
+  
   
   #about .row{
    margin-top: 50px;
@@ -124,6 +132,10 @@ html{
   #about .about-text{
     text-align: justify;
     
+  }
+
+ .embed-responsive-item{
+    border-radius: 20px;
   }
   
   
@@ -150,7 +162,7 @@ html{
       background-color: transparent;
       width: 300px;
       height: 200px;
-      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      perspective: 1000px; 
       display: block;
       margin: auto;
       margin-top: 40px;
@@ -184,6 +196,11 @@ html{
     .flip-card-front {
       background-color: #bbb;
       color: black;
+      border-radius: 20px;
+    }
+
+    .flip-card-front img{
+      border-radius: 20px;
     }
     
     /* Style the back side */
@@ -191,10 +208,13 @@ html{
       background-color:#cda45e;
       color: white;
       transform: rotateY(180deg);
-      padding: 5px;
+      padding: 10px;
       padding-top: 20px;
     }
   
+    .flip-card-back{
+      border-radius: 20px;
+    }
   
     /* EVENT */
     #event{
@@ -215,6 +235,8 @@ html{
       margin-bottom: 80px;
       
     }
+
+   
   
     .carousel{
       width: 400px;
@@ -229,11 +251,6 @@ html{
       height: 300px;
     }
     
-    .carousel-item img {
-        width: 400px;
-        height: 300px;
-       
-    }
   
     .carousel-item video{
       width: 100%;
@@ -241,19 +258,44 @@ html{
     }
   
     .cooking-text{
-      padding-left: 80px;
-      padding-right: 80px;
+      padding-left: 20px;
+      padding-right: 20px;
       text-align:  justify;
       margin-right: 100px;
-  
+      background-color: #7c633a;
+      border-radius: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 700px;
       
+      
+    }
+
+    .event-btn{
+      background-color: #cda45e;
+      border: none;
+      border-radius: 10px;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      color: white;
+    }
+
+    .event-btn:hover{
+      background-color:#a16e15;
+      transform: scale(1.1);
     }
   
     .meeting-text{
-      padding-left: 80px;
-      padding-right: 80px;
+      padding-left: 20px;
+      padding-right: 20px;
       text-align:  justify;
       margin-left: 100px;
+      background-color: #7c633a;
+      border-radius: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 700px;
       
     }
   
@@ -262,11 +304,159 @@ html{
      
     }
   
-    /* BOOKING */
+    /* RESERVATION */
     #booking{
+      text-align: center;
       align-items: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      
       
     }
+
+    #booking h2{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    #booking form{
+        width:50%;
+        margin:auto;
+    }
+
+    #booking button{
+        border-radius: 10px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color:  #cda45e;
+        color: white;
+    }
    
-  /*  */
-  
+    #booking button:hover{
+      background-color:#a16e15;
+      transform: scale(1.1);
+    }
+
+    .form-input{
+      margin-top: 15px;
+    }
+
+    .form-input .btn{
+      background-color: #cda45e;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      display: block;
+      margin: auto;
+    }
+  /* FOOTER */
+
+#footer{
+    background-image: url(Assets/Image/bg-footer.jpg) ;
+    background-color: rgb(43, 38, 38);
+    background-blend-mode: multiply;
+    width: 100%;
+    background-size: cover;
+}
+
+
+.map {
+    position: relative;
+    padding-bottom: 20%; 
+    height: 0;
+    overflow: hidden;
+}
+
+.map iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100% !important;
+height: 250px;
+}
+
+
+.footer-logo{
+    width:100px;
+    height: 100px;
+    border-radius:50%;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+   
+}
+
+
+.logo-text{
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.logo-text p{
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+
+.contact-us{
+    margin-left: 30px;
+    align-items: center;
+}
+
+ 
+#footer .socmed a{
+  font-size: 18px;
+  display: inline-block;
+  background: #28251f;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .socmed a:hover{
+  background: #cda45e;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hours{
+  margin-top: 20px;
+}
+
+.message{
+ padding-right: 50px;
+ margin-right: auto;
+  position: relative;
+}
+
+.btn-message{
+  margin-top: 20px;
+  background-color: #cda45e;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn-message:hover{
+  background-color:#a16e15;
+  transform: scale(1.1);
+}
+
+
+
+   
